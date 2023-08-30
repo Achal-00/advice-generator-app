@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --greyish-blue: hsl(217, 19%, 38%);
+  --dark-greyish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+  min-height: 100dvh;
+  background: var(--dark-blue);
+  display: grid;
+  align-content: center;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--dark-greyish-blue);
+  font-size: min(5dvw, 5dvh);
+  border-radius: 1em;
+  padding: 10% 5%;
+  position: relative;
+}
+
+.wrapper {
+  display: grid;
+  gap: 1.5em;
+}
+
+.wrapper p {
+  color: var(--neon-green);
+  font-size: 70%;
+  letter-spacing: 0.2em;
+}
+
+.wrapper h1 {
+  color: var(--light-cyan);
+  font-size: 130%;
+}
+
+.divider {
+  padding: 10% 0%;
+}
+
+.divider img {
+  width: 100%;
+}
+
+.btn {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn svg {
+  width: 1em;
+  height: 1em;
+}
+
+.btn button {
+  background: var(--neon-green);
+  border: none;
+  padding: 1em;
+  border-radius: 100%;
+}
+
+@media (width >= 35em) and (height <= 27em) and (orientation: landscape) {
+  .container {
+    width: 70%;
+    margin: 5% auto;
+    padding: 5% 5%;
+  }
+}
+
+@media (width >= 44.5em) and (orientation: portrait) {
+  .container {
+    width: 80%;
+    font-size: min(4dvw, 4dvh);
+  }
+}
+
+@media (width >= 62em) and (height <= 64em) and (orientation: landscape) {
+  .container {
+    width: 50%;
+    margin: 5% auto;
+    padding: 5% 5%;
+    font-size: min(4dvw, 4dvh);
+  }
+}
+
+@media (width >= 75em) and (hover: hover) {
+  .container {
+    width: 40%;
+    font-size: min(3dvw, 3dvh);
+    padding: 3%;
+  }
+
+  .divider {
+    padding: 8% 0%;
+  }
+
+  .btn button:hover {
+    cursor: pointer;
+    box-shadow: 0em 0em 2em var(--neon-green);
+  }
+}
